@@ -1,0 +1,18 @@
+#c[1,1,1]c[1,1,-1]c[1,-1,1]c[-1,1,1]c[-1,-1,1]c[-1,1,-1]c[1,-1,-1]c[-1,-1,-1]
+
+list_ = [['c',1,1,1],['c',1,1,-1],['c',1,-1,1],['c',-1,1,1],['c',-1,-1,1],['c',-1,1,-1],['c',1,-1,-1],['c',-1,-1,-1]]
+
+print_list = []
+for i in list_:
+    for n in range(3):
+        list_0 = []
+        list_0.append(i)
+        add_list = []
+        for p in i:
+            add_list.append(p)
+        add_list[n+1] = add_list[n+1]*(-1)
+        list_0.append(add_list)
+        print_list.append(list_0)
+
+
+print(print_list)

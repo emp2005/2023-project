@@ -1,0 +1,181 @@
+#this code is to make cordinates for a sphere
+import math
+
+
+file_name = "sphere_code.txt"
+file = open(file_name,"w")
+
+
+PI = math.pi
+overall_list = []
+floor_list = []
+######################
+rounding_digit = 2
+rotations = 8
+p=4
+r=1
+########################
+r_sub = 0
+z_increments = r/p
+radiants = 0
+distance_value = .6
+#middle calculation [x,y,z]
+
+overall_list.append([[0,0,-r]])
+
+for i in range(p-1):
+    z_val = r - (i+1)*z_increments
+    r_sub = math.sqrt(r*r-z_val*z_val)
+    for t in range(rotations):
+        radians = (t+1)*PI*2/rotations
+        floor_list.append([round(r_sub*math.cos(radians),rounding_digit),round(r_sub*math.sin(radians),rounding_digit),-round(z_val,rounding_digit)])
+    overall_list.append(floor_list)
+    floor_list = []
+
+z_val = 0
+r_sub = r
+for t in range(rotations):
+        radians = (t+1)*PI*2/rotations
+        floor_list.append([round(r_sub*math.cos(radians),rounding_digit),round(r_sub*math.sin(radians),rounding_digit),round(z_val,rounding_digit)])
+overall_list.append(floor_list)
+
+floor_list = []
+
+for i in range(p-1):
+    z_val = (i+1)*z_increments
+    r_sub = math.sqrt(r*r-z_val*z_val)
+    for t in range(rotations):
+        radians = (t+1)*PI*2/rotations
+        floor_list.append([round(r_sub*math.cos(radians),rounding_digit),round(r_sub*math.sin(radians),rounding_digit),round(z_val,rounding_digit)])
+    overall_list.append(floor_list)
+    floor_list = []
+
+
+overall_list.append([[0,0,r]])
+
+
+
+for t in overall_list:
+    print(t)
+#a(1,2,3)
+
+string_printout = ""
+
+
+# for floors in range(z_repitition_value):
+
+for floor0 in overall_list:
+    for cordinate0 in floor0:
+
+        string_printout += str("s") + "("
+        string_printout += str(cordinate0[0])
+        string_printout += ","
+        string_printout += str(cordinate0[1])
+        string_printout += ","
+        string_printout += str(cordinate0[2])
+        string_printout += ")"
+
+for p in overall_list:
+    print(p)
+    print("\n\n\n")
+
+print("\n\n\n\n\n")
+
+
+
+# print("-----------------------------")
+# print(string_printout)
+# print("-----------------------------")
+
+
+value=0
+
+print("the index value is: ", len(overall_list))
+
+# for value in range(len(overall_list)):
+#     if value<len
+
+
+print_list = []
+for i in overall_list:
+    indexes = len(i)
+    counter = 0
+    for t in i:
+        t.insert(0,"s")
+        list_ = []
+        if (counter == indexes-1):
+            list_.append(t)
+            list_.append(i[0])
+            print_list.append(list_)
+            break
+        list_.append(t)
+        list_.append(i[counter+1])
+        print_list.append(list_)
+        counter+=1
+
+
+
+counter = 0
+counter_2 = 0
+# print(print_list)
+print("---------------------------------------")
+
+for i in overall_list:
+    print(i)
+
+print("---------------------------------------")
+print(len(overall_list))
+print(overall_list[len(overall_list)-1])
+print(overall_list[len(overall_list)-2])
+
+t = 0
+
+total_index = len(overall_list)
+
+list_ = []
+for r2 in overall_list[1]:
+    list_ = []
+    list_.append(r2)
+    list_.append(overall_list[0][0])
+    print_list.append(list_)
+
+for t in range(len(overall_list)):
+    m = overall_list[t]
+    counter_2=0
+    if counter == len(overall_list)-1:
+
+        for r2 in overall_list[len(overall_list)-2]:
+            list_ = []
+            list_.append(r2)
+            list_.append(overall_list[len(overall_list)-1][0])
+            print_list.append(list_)
+
+        counter +=1
+        counter_2 = 0
+        continue
+    
+    if counter<int(len(overall_list)-2) and counter !=0:
+        for n in m:
+            print(counter_2)
+            list_ = []
+            list_.append(n)
+            list_.append(overall_list[counter+1][counter_2])
+            print_list.append(list_)
+            counter_2+=1
+    
+    
+
+    counter_2 = 0
+    counter+=1
+
+print("\n\n")
+print(print_list)
+
+for ran1 in print_list:
+    file.write(str(ran1[0][0])+" "+str(ran1[0][1])+" "+
+    str(ran1[0][2])+" "+str(ran1[0][3])+str(ran1[1][0])+" "+str(ran1[1][1])+" "+str(ran1[1][2])+" "+
+    str(ran1[1][3])+"\n")
+
+file.close()
+# for i in print_list:
+#     print(i)

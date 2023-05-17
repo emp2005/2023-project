@@ -1,0 +1,5 @@
+vertix1(0,0,0)
+vertix2(2,1,-1)
+vertix3(2,1,1)
+vertix4(2,-1,-1)
+vertix5(2,-1,1)
