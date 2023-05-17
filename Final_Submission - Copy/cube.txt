@@ -1,0 +1,8 @@
+vertix1(-1,-1,-1)
+vertix2(-1,-1,1)
+vertix3(1,-1,1)
+vertix4(1,-1,-1)
+vertix5(-1,1,-1)
+vertix6(-1,1,1)
+vertix7(1,1,1)
+vertix8(1,1,-1)

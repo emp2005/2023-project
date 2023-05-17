@@ -1,0 +1,31 @@
+The Original Points are located at:
+vertix1     x: -1.0     y: -1.0     z: -1.0     #336CFF
+vertix2     x: -1.0     y: -1.0     z: 1.0     #9333FF
+vertix3     x: 1.0     y: -1.0     z: 1.0     #1CC623
+vertix4     x: 1.0     y: -1.0     z: -1.0     #FEB641
+vertix5     x: -1.0     y: 1.0     z: -1.0     #F32D2D
+vertix6     x: -1.0     y: 1.0     z: 1.0     #763C3C
+vertix7     x: 1.0     y: 1.0     z: 1.0     #70FFD7
+vertix8     x: 1.0     y: 1.0     z: -1.0     #000000
+
+The y rotation is 360.0 degrees
+The new Points after this rotation are located at:
+vertix1     x: -1.0     y: -1.0     z: -1.0     #336CFF
+vertix2     x: -1.0     y: -1.0     z: 1.0     #9333FF
+vertix3     x: 1.0     y: -1.0     z: 1.0     #1CC623
+vertix4     x: 1.0     y: -1.0     z: -1.0     #FEB641
+vertix5     x: -1.0     y: 1.0     z: -1.0     #F32D2D
+vertix6     x: -1.0     y: 1.0     z: 1.0     #763C3C
+vertix7     x: 1.0     y: 1.0     z: 1.0     #70FFD7
+vertix8     x: 1.0     y: 1.0     z: -1.0     #000000
+
+The x rotation is 360.0 degrees
+The final Points after the y and x rotation are located at:
+vertix1     x: -1.0     y: -1.0     z: -1.0     #336CFF
+vertix2     x: -1.0     y: -1.0     z: 1.0     #9333FF
+vertix3     x: 1.0     y: -1.0     z: 1.0     #1CC623
+vertix4     x: 1.0     y: -1.0     z: -1.0     #FEB641
+vertix5     x: -1.0     y: 1.0     z: -1.0     #F32D2D
+vertix6     x: -1.0     y: 1.0     z: 1.0     #763C3C
+vertix7     x: 1.0     y: 1.0     z: 1.0     #70FFD7
+vertix8     x: 1.0     y: 1.0     z: -1.0     #000000
